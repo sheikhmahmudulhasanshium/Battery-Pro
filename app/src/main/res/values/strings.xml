@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Battery Pro</string>
+    <string name="settings_title">Battery Protection Settings</string>
+    <string name="range_default">Default (20% – 80%)</string>
+    <string name="range_extreme">Extreme (10% – 100%)</string>
+    <string name="select_sound">Select Alert Sound</string>
+    <string name="start_monitoring">Start Monitoring</string>
+    <string name="whatsapp_label">WhatsApp Number (eg 9198765…)</string>
+    <string name="battery_label">Battery</string>
+    <string name="btn_start">START</string>
+    <string name="btn_stop">STOP</string>
+</resources>

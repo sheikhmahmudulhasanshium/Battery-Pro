@@ -1,0 +1,40 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rangeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:checkedButton="@+id/rbDefault">
+            <RadioButton android:id="@+id/rbDefault" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/range_default" />
+            <RadioButton android:id="@+id/rbExtreme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/range_extreme" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etWhatsApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="phone"
+            android:hint="@string/whatsapp_label"
+            android:inputType="phone" />
+
+        <Button android:id="@+id/btnSound" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/select_sound" />
+        <Button android:id="@+id/btnStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/start_monitoring" />
+    </LinearLayout>
+</ScrollView>
