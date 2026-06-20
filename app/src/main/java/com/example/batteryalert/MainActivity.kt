@@ -1,6 +1,5 @@
 package com.example.batteryalert
 
-import android.Manifest
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         tvLogs.text = BatteryPrefs.getLogs(this)
 
         if (Build.VERSION.SDK_INT >= 33) {
-            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
+            requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 1)
         }
 
         findViewById<Button>(R.id.btnStart).setOnClickListener {

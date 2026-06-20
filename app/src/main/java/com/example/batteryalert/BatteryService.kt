@@ -1,5 +1,5 @@
+@file:Suppress("UnusedResources", "UnusedImport")
 package com.example.batteryalert
-
 import android.app.*
 import android.content.*
 import android.media.AudioAttributes

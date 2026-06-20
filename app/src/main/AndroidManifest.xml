@@ -20,7 +20,7 @@
             android:foregroundServiceType="specialUse">
             <property
                 android:name="android.app.PROPERTY_SPECIAL_USE_DESCRIPTION"
-                android:value="Monitors battery levels to alert users when custom charge targets are reached, protecting battery health." />
+                android:value="Monitors battery health ranges and triggers alarms to prevent overcharging." />
         </service>
 
         <receiver android:name=".BatteryWidget" android:exported="true">
