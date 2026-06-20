@@ -5,36 +5,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="vertical"
-        android:padding="24dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/settings_title"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/rangeGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="20dp"
-            android:checkedButton="@+id/rbDefault">
-            <RadioButton android:id="@+id/rbDefault" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/range_default" />
-            <RadioButton android:id="@+id/rbExtreme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/range_extreme" />
-        </RadioGroup>
-
-        <EditText
-            android:id="@+id/etWhatsApp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="phone"
-            android:hint="@string/whatsapp_label"
-            android:inputType="phone" />
-
-        <Button android:id="@+id/btnSound" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/select_sound" />
-        <Button android:id="@+id/btnStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/start_monitoring" />
+        android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_custom_range" android:textStyle="bold" android:textSize="18sp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/etMin" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="@string/hint_min" android:autofillHints="none" android:inputType="number" />
+            <EditText android:id="@+id/etMax" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="@string/hint_max" android:autofillHints="none" android:inputType="number" />
+        </LinearLayout>
+        <EditText android:id="@+id/etWhatsApp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hint_wa" android:autofillHints="phone" android:inputType="phone" />
+        <Button android:id="@+id/btnStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_start_sync" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_activity_report" android:textStyle="bold" android:layout_marginTop="20dp"/>
+        <TextView android:id="@+id/tvLogs" android:layout_width="match_parent" android:layout_height="200dp" android:padding="10dp" android:scrollbars="vertical" />
+        <Button android:id="@+id/btnClearLogs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_clear_history" android:textSize="12sp" android:layout_gravity="end"/>
     </LinearLayout>
 </ScrollView>
