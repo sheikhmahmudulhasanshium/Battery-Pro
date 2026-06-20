@@ -1,3 +1,4 @@
+@'
 *.iml
 .gradle
 /local.properties
@@ -6,10 +7,13 @@
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+/.idea/assetWizard.settings.xml
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+*.pyc
+*.pyo
+*.log
+'@ | Out-File -FilePath .gitignore -Encoding utf8
