@@ -22,4 +22,12 @@ object BatteryPrefs {
     fun isRun(c: Context) = c.getSharedPreferences(P, 0).getBoolean("r", false)
     fun setSound(c: Context, uri: String) = c.getSharedPreferences(P, 0).edit { putString("s", uri) }
     fun getSound(c: Context): String? = c.getSharedPreferences(P, 0).getString("s", null)
+
+    fun setMode(c: Context, m: Int) = c.getSharedPreferences(P, 0).edit { putInt("m", m) }
+    fun getMode(c: Context) = c.getSharedPreferences(P, 0).getInt("m", 0) // 0: Default, 1: Custom, 2: Extreme
+
+    fun setTheme(c: Context, t: Int) = c.getSharedPreferences(P, 0).edit { putInt("t", t) }
+    fun getTheme(c: Context) = c.getSharedPreferences(P, 0).getInt("t", -1) // -1: System, 1: Light, 2: Dark
+
+    fun resetAll(c: Context) = c.getSharedPreferences(P, 0).edit { clear() }
 }

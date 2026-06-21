@@ -1,28 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F44336"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <LinearLayout
-        android:id="@+id/widget_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F44336"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="8dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_battery_alert_white"
+        android:contentDescription="@string/battery_label" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/battery_label"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp" />
-
-        <Button
-            android:id="@+id/widget_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_start"
-            android:textSize="12sp" />
-    </LinearLayout>
-</FrameLayout>
+    <TextView
+        android:id="@+id/widget_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_start"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="12sp" />
+</LinearLayout>
