@@ -20,4 +20,6 @@ object BatteryPrefs {
     fun clearLogs(c: Context) = c.getSharedPreferences(P, 0).edit { remove("l") }
     fun setRun(c: Context, r: Boolean) = c.getSharedPreferences(P, 0).edit { putBoolean("r", r) }
     fun isRun(c: Context) = c.getSharedPreferences(P, 0).getBoolean("r", false)
+    fun setSound(c: Context, uri: String) = c.getSharedPreferences(P, 0).edit { putString("s", uri) }
+    fun getSound(c: Context): String? = c.getSharedPreferences(P, 0).getString("s", null)
 }

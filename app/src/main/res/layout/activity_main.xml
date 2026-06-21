@@ -13,6 +13,7 @@
             <EditText android:id="@+id/etMax" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="@string/hint_max" android:autofillHints="none" android:inputType="number" />
         </LinearLayout>
         <EditText android:id="@+id/etWhatsApp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hint_wa" android:autofillHints="phone" android:inputType="phone" />
+        <Button android:id="@+id/btnPickSound" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_pick_sound" style="?attr/borderlessButtonStyle" />
         <Button android:id="@+id/btnStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_start_sync" />
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_activity_report" android:textStyle="bold" android:layout_marginTop="20dp"/>
         <TextView android:id="@+id/tvLogs" android:layout_width="match_parent" android:layout_height="200dp" android:padding="10dp" android:scrollbars="vertical" />

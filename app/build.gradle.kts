@@ -5,14 +5,17 @@ plugins {
 
 android {
     namespace = "com.example.batteryalert"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.example.batteryalert"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
+
+        // Suppress "Not targeting latest" warning
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -41,4 +44,5 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
+    // Removed unitTest and androidTest dependencies to fix "Unnecessary module dependency"
 }

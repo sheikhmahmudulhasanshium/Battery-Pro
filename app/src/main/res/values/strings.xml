@@ -1,15 +1,24 @@
 <resources>
     <string name="app_name">Battery Pro</string>
     <string name="title_custom_range">Custom Range Alert</string>
-    <string name="hint_min">Min (eg 20)</string>
-    <string name="hint_max">Max (eg 80)</string>
-    <string name="hint_wa">WA Number (eg 919876543210)</string>
+    <string name="hint_min">Min (e.g. 20)</string>
+    <string name="hint_max">Max (e.g. 80)</string>
+    <string name="hint_wa">WA Number (e.g. 919876543210)</string>
     <string name="btn_start_sync">Start &amp; Sync WhatsApp</string>
+    <string name="btn_pick_sound">Select Custom Alert Sound</string>
     <string name="title_activity_report">Activity Report</string>
     <string name="btn_clear_history">Clear History</string>
     <string name="battery_label">Battery</string>
     <string name="btn_start">START</string>
-    <string name="btn_stop">STOP</string>
-    <string name="msg_wa">Battery Pro Active. Status: %1$d%%</string>
+    <string name="btn_stop_label">STOP</string>
+    <string name="btn_stop_alarm">STOP ALARM</string>
+    <string name="notif_active_title">Battery Pro: Online</string>
+    <string name="notif_active_desc">Monitoring %1$d%% - %2$d%%</string>
     <string name="log_start">Protection Started (%1$d-%2$d)</string>
+    <string name="msg_wa_low">Charge Immediately! Battery is at %1$d%%</string>
+    <string name="msg_wa_optimal">Optimal Charge Remaining. Battery is at %1$d%%</string>
+    <string name="msg_wa_over">Overcharge Alert! Battery is at %1$d%%</string>
+    <string name="range_breach_title">RANGE BREACH!</string>
+    <string name="range_breach_desc">Battery: %1$d%% (Target: %2$d-%3$d%%)</string>
+    <string name="channel_name">Alarms</string>
 </resources>

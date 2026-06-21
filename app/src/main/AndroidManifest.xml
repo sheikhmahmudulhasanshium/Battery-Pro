@@ -20,7 +20,7 @@
             android:foregroundServiceType="specialUse">
             <property
                 android:name="android.app.PROPERTY_SPECIAL_USE_DESCRIPTION"
-                android:value="Monitors battery health ranges and triggers alarms to prevent overcharging." />
+                android:value="Monitors battery charge thresholds to protect health via persistent alarms." />
         </service>
 
         <receiver android:name=".BatteryWidget" android:exported="true">
@@ -28,7 +28,9 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.example.batteryalert.TOGGLE" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider" android:resource="@xml/battery_widget_info" />
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/battery_widget_info" />
         </receiver>
 
         <activity android:name=".MainActivity" android:exported="true">

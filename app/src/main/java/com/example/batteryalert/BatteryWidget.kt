@@ -13,7 +13,7 @@ class BatteryWidget : AppWidgetProvider() {
         for (id in ids) {
             val views = RemoteViews(context.packageName, R.layout.battery_widget)
             val run = BatteryPrefs.isRun(context)
-            views.setTextViewText(R.id.widget_btn, if (run) "STOP" else "START")
+            views.setTextViewText(R.id.widget_btn, if (run) context.getString(R.string.btn_stop_label) else context.getString(R.string.btn_start))
             views.setInt(R.id.widget_bg, "setBackgroundColor", if (run) Color.GREEN else Color.RED)
             val pi = PendingIntent.getBroadcast(context, 0, Intent(context, BatteryWidget::class.java).apply { action = "com.example.batteryalert.TOGGLE" }, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
             views.setOnClickPendingIntent(R.id.widget_btn, pi)
@@ -24,7 +24,7 @@ class BatteryWidget : AppWidgetProvider() {
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
         if (intent.action == "com.example.batteryalert.TOGGLE") {
-            val r = !BatteryPrefs.isRun(context!!)
+            val r = !BatteryPrefs.isRun(context)
             BatteryPrefs.setRun(context, r)
             if (r) ContextCompat.startForegroundService(context, Intent(context, BatteryService::class.java))
             else context.stopService(Intent(context, BatteryService::class.java))
